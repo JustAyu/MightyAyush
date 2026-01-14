@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush | Official Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <style>
+        :root { --mongo: #00ED64; --cherry: #FF3131; }
+        body { background: #010409; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        /* --- Floating Particles Background --- */
+        #particles-js {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #001e2b 0%, #010409 100%);
+        }
+
+        /* --- Animated Name --- */
+        .ayush-name {
+            font-weight: 900;
+            background: linear-gradient(to right, #fff, var(--mongo), var(--cherry), #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
+
+        /* --- Responsive Grid Fixes --- */
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media (min-width: 768px) { .skills-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+
+        .stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        @media (min-width: 768px) { .stack-grid { grid-template-columns: repeat(6, 1fr); gap: 25px; } }
+
+        /* --- Glass Cards & Hover --- */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+        .glass:hover { border-color: var(--mongo); transform: translateY(-5px); box-shadow: 0 10px 30px -10px var(--mongo); }
+
+        .icon-box {
+            background: rgba(255,255,255,0.02);
+            padding: 20px; border-radius: 15px; text-align: center;
+            transition: 0.3s;
+        }
+        .icon-box:hover { transform: scale(1.15); background: rgba(255,255,255,0.08); }
+        .icon-box i { font-size: 3.5rem; display: block; margin-bottom: 10px; }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: var(--mongo); border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <nav class="fixed top-0 w-full z-[100] backdrop-blur-xl border-b border-white/5 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-black text-mongo">A<span class="text-white">.</span></div>
+        <div class="flex gap-4 md:gap-8 text-[10px] md:text-xs font-bold uppercase tracking-tighter">
+            <a href="#home" class="hover:text-mongo transition">Home</a>
+            <a href="#skills" class="hover:text-mongo transition">Expertise</a>
+            <a href="#stack" class="hover:text-mongo transition text-mongo">Stack</a>
+            <a href="#contact" class="hover:text-cherry transition">Telegram</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <p class="text-mongo tracking-[5px] text-[10px] mb-4" data-aos="fade-down">READY TO BUILD</p>
+        <h1 class="text-8xl md:text-[11rem] ayush-name leading-none" data-aos="zoom-in">AYUSH</h1>
+        <p class="mt-4 text-gray-500 max-w-lg text-sm md:text-lg italic" data-aos="fade-up">"Transforming logic into high-speed automation & elegant web systems."</p>
+    </section>
+
+    <section id="skills" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-black mb-10 border-l-4 border-mongo pl-4">EXPERTISE</h2>
+        <div class="skills-grid">
+            <div class="glass p-6 text-center" data-aos="fade-up">
+                <i class="fab fa-telegram text-mongo text-4xl mb-3"></i>
+                <h3 class="font-bold text-sm">Bot Developer</h3>
+            </div>
+            <div class="glass p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-code text-blue-400 text-4xl mb-3"></i>
+                <h3 class="font-bold text-sm">Full Stack</h3>
+            </div>
+            <div class="glass p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                <i class="fab fa-android text-green-500 text-4xl mb-3"></i>
+                <h3 class="font-bold text-sm">Android Apps</h3>
+            </div>
+            <div class="glass p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-paint-brush text-purple-400 text-4xl mb-3"></i>
+                <h3 class="font-bold text-sm">UI Designer</h3>
+            </div>
+            <div class="glass p-6 text-center" data-aos="fade-up">
+                <i class="fas fa-server text-mongo text-4xl mb-3"></i>
+                <h3 class="font-bold text-sm">DevOps</h3>
+            </div>
+            <div class="glass p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-shield-alt text-cherry text-4xl mb-3"></i>
+                <h3 class="font-bold text-sm">Security</h3>
+            </div>
+            <div class="glass p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-cloud text-blue-300 text-4xl mb-3"></i>
+                <h3 class="font-bold text-sm">Cloud Ops</h3>
+            </div>
+            <div class="glass p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-terminal text-yellow-400 text-4xl mb-3"></i>
+                <h3 class="font-bold text-sm">Scripting</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="py-20 bg-white/[0.02] border-y border-white/5 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-xl font-bold mb-16 opacity-50 tracking-[10px]">MY TECH COMMAND</h2>
+            <div class="stack-grid">
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-go-original-wordmark colored"></i><span class="text-[10px]">Go</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-python-plain colored"></i><span class="text-[10px]">Python</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-mongodb-plain colored"></i><span class="text-[10px]">MongoDB</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-nodejs-plain colored"></i><span class="text-[10px]">NodeJS</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-react-original colored"></i><span class="text-[10px]">React</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-flutter-plain colored"></i><span class="text-[10px]">Flutter</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-cplusplus-plain colored"></i><span class="text-[10px]">C++</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-docker-plain colored"></i><span class="text-[10px]">Docker</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-kubernetes-plain colored"></i><span class="text-[10px]">K8s</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-firebase-plain colored"></i><span class="text-[10px]">Firebase</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-redis-plain colored"></i><span class="text-[10px]">Redis</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-git-plain colored"></i><span class="text-[10px]">Git</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-amazonwebservices-original colored"></i><span class="text-[10px]">AWS</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-mysql-plain colored"></i><span class="text-[10px]">MySQL</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-linux-plain colored"></i><span class="text-[10px]">Linux</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-typescript-plain colored"></i><span class="text-[10px]">TS</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-java-plain colored"></i><span class="text-[10px]">Java</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-postgresql-plain colored"></i><span class="text-[10px]">Postgres</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-nginx-original colored"></i><span class="text-[10px]">Nginx</span></div>
+                <div class="icon-box" data-aos="zoom-in"><i class="devicon-dart-plain colored"></i><span class="text-[10px]">Dart</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-4xl mx-auto">
+        <div class="glass p-10 border-l-8 border-cherry relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 opacity-5 text-9xl font-black">RULES</div>
+            <h2 class="text-3xl font-black mb-8 italic">THE PROTOCOLS</h2>
+            <ul class="space-y-6 text-sm md:text-lg">
+                <li class="flex gap-4 items-center"><i class="fas fa-check text-mongo"></i> Working Hours: 10:00 - 20:00 (IST)</li>
+                <li class="flex gap-4 items-center"><i class="fas fa-times text-cherry"></i> No "Hi/Hello" - Just send the project brief.</li>
+                <li class="flex gap-4 items-center"><i class="fas fa-shield-alt text-mongo"></i> 50% Advance is required for any work.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 text-center px-6">
+        <h2 class="text-4xl font-black mb-10" data-aos="fade-up">LET'S CONNECT</h2>
+        <a href="https://t.me/YourUsername" class="glass px-10 py-6 inline-flex flex-col md:flex-row items-center gap-6 border-2 border-mongo group">
+            <i class="fab fa-telegram text-6xl text-[#24A1DE] group-hover:rotate-12 transition"></i>
+            <div class="text-left">
+                <p class="text-xs opacity-50 uppercase tracking-widest">Telegram Official</p>
+                <h4 class="text-2xl font-bold">@Ayush_On_TG</h4>
+            </div>
+        </a>
+    </section>
+
+    <footer class="py-10 text-center text-[10px] opacity-20 tracking-[10px] uppercase">
+        Built by Ayush • 2026
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: false });
+
+        // Better Particles
+        const canvas = document.getElementById('particles-js');
+        function createParticle() {
+            const p = document.createElement('div');
+            p.style.position = 'absolute';
+            p.style.width = Math.random() * 3 + 'px';
+            p.style.height = p.style.width;
+            p.style.background = Math.random() > 0.5 ? '#00ED64' : '#ffffff';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.top = '100vh';
+            p.style.opacity = Math.random();
+            p.style.borderRadius = '50%';
+            p.style.pointerEvents = 'none';
+            canvas.appendChild(p);
+
+            const anim = p.animate([
+                { transform: 'translateY(0)', opacity: p.style.opacity },
+                { transform: `translateY(-110vh) translateX(${Math.random() * 100 - 50}px)`, opacity: 0 }
+            ], { duration: Math.random() * 5000 + 5000, easing: 'linear' });
+
+            anim.onfinish = () => p.remove();
+        }
+        setInterval(createParticle, 100);
+    </script>
+</body>
+</html>
